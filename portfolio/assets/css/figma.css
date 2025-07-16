@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.project-list {
+    column-count: 2;
+    column-gap: 20px;
+    padding: 0 10px;
+}
+
+/* Card style */
+.project-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    break-inside: avoid;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.01);
+}
+
+.project-item h2 {
+    font-size: 1.4rem;
+    margin: 15px;
+    color: #444;
+}
+
+.project-item p {
+    font-size: 1rem;
+    margin: 0 15px 15px;
+    color: #666;
+}
+
+/* Figma iframe */
+.project-item iframe {
+    width: 100%;
+    height: 450px;
+    display: block;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .project-list {
+        column-count: 1;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .project-item h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-item p {
+        font-size: 0.95rem;
+    }
+
+    .project-item iframe {
+        height: 350px;
+    }
+}

@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    overflow-x: hidden; /* Prevent global x-overflow */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* ✅ Masonry layout using columns */
+.project-list {
+    column-count: 4;
+    column-gap: 20px;
+    padding: 0 10px;
+}
+
+/* ✅ Masonry blocks */
+.project-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    break-inside: avoid;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.02);
+}
+
+.project-item h2 {
+    font-size: 1.2rem;
+    margin: 15px;
+    color: #444;
+}
+
+.project-item p {
+    font-size: 1rem;
+    margin: 0 15px 15px;
+    color: #666;
+}
+
+/* ✅ For both images and videos */
+.project-item img,
+.project-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border: none;
+    outline: none;
+}
+
+/* Optional: limit height of videos if needed */
+.project-item video {
+    max-height: 600px;
+    border-radius: 0;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+    .project-list {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 900px) {
+    .project-list {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-list {
+        column-count: 1;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .project-item h2 {
+        font-size: 1.1rem;
+    }
+
+    .project-item p {
+        font-size: 0.95rem;
+    }
+}
